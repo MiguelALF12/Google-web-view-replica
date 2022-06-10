@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../styles/all.css">  -->
+    <link rel="stylesheet" href="./styles/form.css"> 
+</head>
+<body>
+    <div>
+    <header>
+        <div class="d-flex bd-highlight mt-2 headerSpans">
+            <div class="me-auto p-2 bd-highlight">
+                <img src="./images/googleAdvancedSearch.png" alt="Menu">
+            </div>
+            <div class="p-2 mt-2 bd-highlight">
+                <a target="_self" href="./index.html">
+                    <span class="mx-2 py-1">Google search</span> 
+                </a>
+            </div>
+            <div class="p-2 mt-1 bd-highlight">
+                <span class="mx-2 py-1">
+                    <a target="_blank" href="https://icons8.com">
+                        <img src="./images/icons8-circled-menu.png" alt="Menu">
+                    </a>
+                </span> 
+            </div>
+            <div class="p-2 bd-highlight">
+                <span class="mx-2 py-1">
+                    <a target="_blank" href="https://icons8.com">
+                        <img src="./images/icons8-male-user-32.png" alt="Menu">
+                    </a>
+                </span> 
+            </div>
+        </div>
+    </header>
+    <div class="titleFormContainer">
+        <label class="labelTitle ">Advanced Search</label>
+    </div>
+    <div class="formContainer">
+    <form action="https://google.com/search">
+        <!-- Mostrar páginas que contengan... -->
+        <div class="titleFormContainer titlesByParts">
+            <div class="d-flex flex-row justify-content-between">
+                <p>Show pages that <br/>contains...</p>
+                <p id="infoAsideFormTitle"><strong>To do this in the search box </strong></p>
+            </div>
+            <div class="d-flex flex-column py-2">
+                <div class="d-flex flex-row py-2">
+                    <label class="formLabels">all of this words:</label>
+                    <input type="text" class="searchInput" id="tep" name="as_q">
+                    <p class="infoAsideForm">Enter the important words: Terrier ratonero tricolor .</p>
+                </div>
+                <div class="d-flex flex-row py-2">
+                    <label class="formLabels">this exact word or phrase:</label>
+                    <input type="text" class="searchInput" id="epfe" name="as_epq">
+                    <p class="infoAsideForm">Enter the exact words between quotation marks: "Terrier ratonero" </p>
+                </div>
+                <div class="d-flex flex-row py-2">
+                    <label class="formLabels">any of these words</label>
+                    <input type="text" class="searchInput" id="cep" name="as_oq">
+                    <p class="infoAsideForm">Enter OR between the desired words:<br/>In miniature OR standard .</p>
+                </div>
+                <div class="d-flex flex-row py-2">
+                    <label class="formLabels">None of these words</label>
+                    <input type="text" class="searchInput" id="nep" name="as_eq">
+                    <p class="infoAsideForm">Enter a middle dash in front of the words you dont want to<br/>see: -Roedor, -"Jack Russell" .</p> 
+                </div>
+                <div class="d-flex flex-row py-2">
+                    <label class="formLabels">numbers of:</label>
+                    <div class="d-flex flex-row" id="ndExtra">
+                        <input type="text" class="searchInput" id="nd" name="as_nlo">
+                        <label class="formLabels px-4">al:</label>
+                        <input type="text" class="searchInput" name="as_nhi">
+                    </div>
+                    <p class="infoAsideForm">Enter a colon between numbers and add a unit of measure<br/> 10..35 lb, $300..$500, 2010..2011.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Luego restringe tus resultados por... -->
+        <div class="titleFormContainer">
+            <p>Then limit your results <br/> for...</p>
+            <div class="d-flex flex-column py-2">
+                <div class="d-flex flex-row py-2">
+                    <label class="formLabels">idioma:</label>
+                    <select id="lang" name="lr">
+                        <option value="">any laguage</option>
+                        <option value="lang_es">Spanish</option>
+                        <option value="lang_en">English</option>
+                    </select>
+                    <p class="infoAsideForm">Search pages based on the idiom you choose.</p>
+                </div>
+                <div class="d-flex flex-row py-2">
+                    <label class="formLabels">area:</label>
+                    <select id="site" name="cr">
+                        <option value="">any area</option>
+                        <option value="countryCOL">Colombia</option>
+                    </select>
+                    <p class="infoAsideForm">Search pages published in your specified area</p>
+                </div>
+                <div class="d-flex flex-row py-2">
+                    <label class="formLabels">last update:</label>
+                    <select id="lastUp" name="as_qdr">
+                        <option value="all">anytime</option>
+                        <option value="d">last 24 hours</option>
+                        <option value="w">upto a week ago</option>
+                        <option value="m">upto a month ago</option>
+                        <option value="y">upto a year ago</option>
+                    </select>
+                    <p class="infoAsideForm">Search pages updated in the time-course you indicate </p>
+                </div>
+                <div class="d-flex flex-row py-2">
+                    <label class="formLabels">site or domain:</label>
+                    <input type="text" class="searchInput" id="siteDom" name="as_sitesearch">
+                    <p class="infoAsideForm">Search a site (such as wikipedia.org) or restrict <br/>results to a domain like .edu, .org o .gov.</p> 
+                </div>
+                <div class="d-flex flex-row py-2">
+                    <label class="formLabels">terms that appear:</label>
+                    <select id="terms" class="as_occt">
+                        <option value="">anywhere in the page</option>
+                        <option value="title">title of the page</option>
+                        <option value="body">in the body of the page</option>
+                        <option value="url">in the url of the page</option>
+                        <option value="link">in the links to page</option>
+                    </select>
+                    <p class="infoAsideForm">search for terms throughout the page, in its title or web address, or <br/> links that direct you to the page you are looking for.</p> 
+                </div>
+                <div class="d-flex flex-row py-2">
+                    <label class="formLabels"><a target="_blank" href="https://support.google.com/websearch/answer/510?p=adv_safesearch&hl=es-419&visit_id=637776262880417772-3286201189&rd=1" class="otherlinks">SafeSearch</a></label>
+                    <select  id="safeSearch" name="as_safesearch_button">
+                        <option value="images">Show most relevant results</option>
+                        <option value="active">Filter explicit results</option>
+                    </select>
+                    <p class="infoAsideForm">Indicate to <a target="_blank" href="https://support.google.com/websearch/answer/510?p=adv_safesearch&hl=es-419&visit_id=637776262880417772-3286201189&rd=1" class="otherlinks">SafeSearch</a> if you want to filter explicit sexual content.</p> 
+                </div>
+                <div class="d-flex flex-row py-2">
+                    <label class="formLabels">document type:</label>
+                    <select  id="typeDoc" name="as_filetype">
+                        <option value="">any format</option>
+                        <option value="pdf">Adobe Acrobat PDF (.pdf)</option>
+                        <option value="xls">Microsoft excel (.xls)</option>
+                        <option value="ppt">Microsoft PowerPoint(.ppt)</option>
+                        <option value="rtf">Rich Text Format (.rtf)</option>
+                    </select>
+                    <p class="infoAsideForm">Search pages with the format you want </p> 
+                </div>
+                <div class="d-flex flex-row py-2">
+                    <label class="formLabels">use rights:</label>
+                    <select id="useRights" name="tbs">
+                        <option value="">all</option>
+                        <option value="sur%3Acl">Creative Commons Licences</option>
+                        <option value="sur:ol">Commercial and other Licences</option>
+                    </select>
+                    <p class="infoAsideForm">Search pages you can use for free</p> 
+                </div>
+                <div class="d-flex flex-row py-2">
+                    <div class="d-flex justify-content-end buttonArea">
+                            <input type="submit" value="Busqueda avanzada" class="advancedSearch">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- También puedes... -->
+        <div class="">
+            <p> Also you can do</p>
+            <div class="d-flex flex-column">
+                    <!-- <h1>uno</h1> 
+                    <h1>dos</h1>  -->
+                    <ul>
+                        <li><a target="_blank" href="https://support.google.com/websearch?p=adv_pages_similar&hl=es-419" class="otherlinks">Search pages similars to a URL</a></li>
+                        <li><a target="_blank" href="https://support.google.com/websearch?p=adv_pages_visited&hl=es-419" class="otherlinks">Search visited pages</a></li>
+                        <li><a target="_blank" href="https://support.google.com/websearch?p=adv_operators&hl=es-419" class="otherlinks">Use the search box operators</a></li>
+                        <li><a target="_blank" href="https://www.google.com/preferences?hl=es-419" class="otherlinks">Personalize the search configuration</a></li>
+                    </ul>
+            </div>
+        </div>
+    </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    </div>
+</body>
+</html>
